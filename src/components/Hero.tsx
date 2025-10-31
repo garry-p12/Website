@@ -91,7 +91,7 @@ const Hero = () => {
             className="hero-resume"
           >
             <motion.a
-              href="/Portfolio/Fulltime_Resume_Guruprasad.pdf"
+              href="/modern-portfolio/Fulltime_Resume_Guruprasad.pdf"
               download
               whileHover={{ scale: 1.05, y: -3 }}
               whileTap={{ scale: 0.95 }}

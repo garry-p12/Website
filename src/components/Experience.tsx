@@ -7,7 +7,7 @@ const Experience = () => {
 
   const experiences = [
     {
-      logo: '/Portfolio/images/sdsc_logo.webp',
+      logo: '/modern-portfolio/images/sdsc_logo.webp',
       company: 'San Diego Supercomputer Center (SDSC)',
       role: 'Data Science Intern (Apr 2025 – Jun 2025)',
       details: [
@@ -18,7 +18,7 @@ const Experience = () => {
       ]
     },
     {
-      logo: '/Portfolio/images/Amazon-Prime-Video-Icon.png',
+      logo: '/modern-portfolio/images/Amazon-Prime-Video-Icon.png',
       company: 'Amazon Prime Video',
       role: 'Software Development Engineer Intern (June 2025 – Sept 2025)',
       details: [
@@ -29,7 +29,7 @@ const Experience = () => {
       ]
     },
     {
-      logo: '/Portfolio/images/IITB-500x500.png',
+      logo: '/modern-portfolio/images/IITB-500x500.png',
       company: 'Indian Institute of Technology',
       role: 'Research Intern (Jan 2023 - June 2024)',
       details: [
@@ -39,7 +39,7 @@ const Experience = () => {
       ]
     },
     {
-      logo: '/Portfolio/images/LogoSPIT.png',
+      logo: '/modern-portfolio/images/LogoSPIT.png',
       company: 'Sardar Patel Institute of Technology',
       role: 'Undergraduate Student Researcher (June 2023 - Dec 2023)',
       details: [
@@ -49,7 +49,7 @@ const Experience = () => {
       ]
     },
     {
-      logo: '/Portfolio/images/LogoSPIT.png',
+      logo: '/modern-portfolio/images/LogoSPIT.png',
       company: 'Sardar Patel Institute of Technology - AIDL Virtual Labs',
       role: 'Deep Learning Intern (Sept 2022 - Dec 2022)',
       details: [
@@ -59,7 +59,7 @@ const Experience = () => {
       ]
     },
     {
-      logo: '/Portfolio/images/1684165331426.jpeg',
+      logo: '/modern-portfolio/images/1684165331426.jpeg',
       company: 'Learn Everything AI',
       role: 'Machine Learning Intern (Aug 2022 - Oct 2022)',
       details: [

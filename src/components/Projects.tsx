@@ -4,19 +4,19 @@ import '../styles/Publications.css';
 const Projects = () => {
   const projects = [
     {
-      image: '/Portfolio/images/ai-ta-banner.png',
+      image: '/modern-portfolio/images/ai-ta-banner.png',
       title: 'AI Assistant StudyPat for Children',
       tech: 'Technologies used: TensorFlow, PyTorch, React.js',
       link: 'https://github.com/garry-p12/StudyPat'
     },
     {
-      image: '/Portfolio/images/creditcard.jpg',
+      image: '/modern-portfolio/images/creditcard.jpg',
       title: 'Credit Card Customer Segmentation',
       tech: 'Technologies used: Scikit Learn, Numpy, Seaborn, Pandas',
       link: 'https://www.kaggle.com/code/guruprasadparasnis/credit-card-dataset-using-kmeans-clustering'
     },
     {
-      image: '/Portfolio/images/employee.png',
+      image: '/modern-portfolio/images/employee.png',
       title: 'Employee Attrition Predictor',
       tech: 'Technologies used: Scikit Learn, Numpy, Seaborn, Pandas',
       link: 'https://github.com/garry-p12/Attrition-Streamlit'

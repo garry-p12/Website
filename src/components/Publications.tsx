@@ -4,37 +4,37 @@ import '../styles/Publications.css';
 const Publications = () => {
   const publications = [
     {
-      image: '/Portfolio/images/fingerprint.jpg',
+      image: '/modern-portfolio/images/fingerprint.jpg',
       title: 'VerifNet-A Novel Score Fusion-Based Method Leveraging Wavelets with Deep Learning and Minutiae Matching for Contactless Fingerprint Recognition',
       publisher: 'Published in: IEEE Transactions on Biometrics, Behaviour and Identity Science',
       link: 'https://www.techrxiv.org/doi/full/10.36227/techrxiv.23906391.v1'
     },
     {
-      image: '/Portfolio/images/mri.jpg',
+      image: '/modern-portfolio/images/mri.jpg',
       title: 'PIXIE: A Novel Loss Function for Binary Semantic Segmentation',
       publisher: 'Under Review: IEEE Transactions on Pattern Analysis and Machine Intelligence',
       link: 'https://www.techrxiv.org/doi/full/10.36227/techrxiv.24204780.v1'
     },
     {
-      image: '/Portfolio/images/ctscan.jpg',
+      image: '/modern-portfolio/images/ctscan.jpg',
       title: 'Advancing Diagnostic Precision: Leveraging Machine Learning Techniques for Accurate Detection of Covid-19, Pneumonia, and Tuberculosis in Chest X-Ray Images',
       publisher: 'Springer Nature',
       link: 'https://www.techrxiv.org/doi/full/10.36227/techrxiv.24204780.v1'
     },
     {
-      image: '/Portfolio/images/pothole.jpg',
+      image: '/modern-portfolio/images/pothole.jpg',
       title: 'RoadScan: A Novel and Robust Transfer Learning Framework for Autonomous Pothole Detection in Roads',
       publisher: 'Published in: IEEE 7th International Conference on Communication and Information Technology',
       link: 'https://ieeexplore.ieee.org/abstract/document/10455143'
     },
     {
-      image: '/Portfolio/images/satellite.png',
+      image: '/modern-portfolio/images/satellite.png',
       title: 'GARP - A Hybrid Preprocessing Technique for Semantic Segmentation of Satellite Images with U-Net Architecture',
       publisher: 'Published in: IEEE 2nd International Conference on Futuristic Technologies',
       link: 'https://ieeexplore.ieee.org/abstract/document/10425502'
     },
     {
-      image: '/Portfolio/images/gan.jpeg',
+      image: '/modern-portfolio/images/gan.jpeg',
       title: 'L-WaveBlock: A Novel Feature Extractor Leveraging Wavelets for Generative Adversarial Networks',
       publisher: 'Published in: IEEE 2nd International Conference on Futuristic Technologies',
       link: 'https://ieeexplore.ieee.org/abstract/document/10425499'
