@@ -56,9 +56,15 @@ const CodeBackground = () => {
       pulseSpeed: number;
 
       constructor() {
-        this.x = Math.random() * canvas.width;
-        this.y = -Math.random() * canvas.height;
-        this.code = codeSnippets[Math.floor(Math.random() * codeSnippets.length)];
+        if (!canvas) {
+          this.x = 0;
+          this.y = 0;
+          this.code = codeSnippets[0];
+        } else {
+          this.x = Math.random() * canvas.width;
+          this.y = -Math.random() * canvas.height;
+          this.code = codeSnippets[Math.floor(Math.random() * codeSnippets.length)];
+        }
         this.speed = 0.5 + Math.random() * 0.8;
         this.fontSize = 11 + Math.random() * 6;
         this.opacity = 0.12 + Math.random() * 0.2;
@@ -69,6 +75,7 @@ const CodeBackground = () => {
       }
 
       update() {
+        if (!canvas) return;
         this.y += this.speed;
         this.rotation += this.rotationSpeed;
         this.pulse += this.pulseSpeed;
@@ -123,7 +130,7 @@ const CodeBackground = () => {
 
     // Create particles
     const particles: CodeChar[] = [];
-    const particleCount = Math.floor((canvas.width * canvas.height) / 10000);
+    const particleCount = canvas ? Math.floor((canvas.width * canvas.height) / 10000) : 50;
 
     for (let i = 0; i < particleCount; i++) {
       particles.push(new CodeChar());
@@ -156,7 +163,7 @@ const CodeBackground = () => {
 
     // Draw grid pattern in background
     const drawGrid = () => {
-      if (!ctx) return;
+      if (!ctx || !canvas) return;
       ctx.save();
       ctx.strokeStyle = '#0ea5e9';
       ctx.lineWidth = 0.3;
@@ -186,6 +193,7 @@ const CodeBackground = () => {
     let frameCount = 0;
     
     const animate = () => {
+      if (!ctx || !canvas) return;
       // Clear with fade effect for trailing
       ctx.fillStyle = 'rgba(15, 23, 42, 0.03)';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -212,6 +220,7 @@ const CodeBackground = () => {
 
     // Handle resize
     const handleResize = () => {
+      if (!canvas) return;
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
       

@@ -69,7 +69,7 @@ const Hero = () => {
             transition={{ delay: 1.2 }}
             className="hero-social"
           >
-            {socialLinks.map((link, index) => (
+            {socialLinks.map((link) => (
               <motion.a
                 key={link.href}
                 href={link.href}
