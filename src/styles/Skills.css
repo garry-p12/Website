@@ -1,0 +1,119 @@
+.skills-section {
+  min-height: 100vh;
+  padding: 5rem 0;
+  background: linear-gradient(to bottom right, #1e293b, #0f172a);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.skill-category {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  border: 2px solid rgba(14, 165, 233, 0.2);
+  min-width: 0;
+  overflow: visible;
+}
+
+.skill-category:hover {
+  border-color: #0ea5e9;
+  box-shadow: 0 8px 25px rgba(14, 165, 233, 0.3);
+}
+
+.skill-category-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: linear-gradient(to right, #0ea5e9, #3b82f6, #6366f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  line-height: 1.4;
+  min-width: 0;
+  flex-wrap: wrap;
+}
+
+.skill-category-title i {
+  background: linear-gradient(to right, #0ea5e9, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 1.75rem;
+}
+
+.skill-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.skill-badge {
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%);
+  border: 2px solid #0ea5e9;
+  border-radius: 25px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #e2e8f0;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.skill-badge::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #0ea5e9 0%, #3b82f6 100%);
+  transition: left 0.3s ease;
+  z-index: -1;
+}
+
+.skill-badge:hover::before {
+  left: 0;
+}
+
+.skill-badge:hover {
+  color: white;
+  box-shadow: 0 5px 15px rgba(14, 165, 233, 0.4);
+}
+
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .skill-category {
+    padding: 1.5rem;
+  }
+  
+  .skill-category-title {
+    font-size: 1.25rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .skill-category-title i {
+    margin-bottom: 0.5rem;
+  }
+}
+

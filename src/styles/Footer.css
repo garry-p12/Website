@@ -1,0 +1,30 @@
+.site-footer {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.site-footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(to right, #0ea5e9 0%, #3b82f6 100%);
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.site-footer p {
+  margin: 0;
+  font-size: 1rem;
+}
+

@@ -1,0 +1,135 @@
+.about-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 0;
+  background: linear-gradient(to bottom right, #1e293b, #0f172a);
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.section-header {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+  background: linear-gradient(to right, #0ea5e9, #3b82f6, #6366f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.section-header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, #0ea5e9, #3b82f6);
+  border-radius: 2px;
+}
+
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.about-image {
+  width: 256px;
+  height: 256px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+}
+
+.about-text {
+  flex: 1;
+  font-size: 1.125rem;
+  color: #cbd5e1;
+  line-height: 1.75;
+}
+
+@media (min-width: 768px) {
+  .about-content {
+    flex-direction: row;
+    gap: 3rem;
+  }
+}
+
+.skills-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 0;
+  background: linear-gradient(to bottom right, #dbeafe, #cffafe);
+}
+
+.skills-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.skills-header {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+  background: linear-gradient(to right, #9333ea, #2563eb, #06b6d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.skill-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: scale(1.1) rotate(5deg);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.skill-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.skill-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333;
+}
+
