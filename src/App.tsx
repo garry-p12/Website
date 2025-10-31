@@ -53,7 +53,7 @@ function App() {
             <h2 className="section-header">About Me</h2>
             <div className="about-content">
               <motion.img
-                src="/modern-portfolio/images/profile_pic-transformed.jpeg"
+                src="/Website/images/profile_pic-transformed.jpeg"
                 alt="Profile"
                 className="about-image"
                 whileHover={{ scale: 1.1, rotate: 5 }}

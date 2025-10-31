@@ -4,7 +4,7 @@ import '../styles/Education.css';
 const Education = () => {
   const educationItems = [
     {
-      logo: '/modern-portfolio/images/UCSD-Seal-Logo.png',
+      logo: '/Website/images/UCSD-Seal-Logo.png',
       school: 'University of California San Diego',
       degree: 'Master of Science in Data Science (2024 - Present)',
       details: [
@@ -12,7 +12,7 @@ const Education = () => {
       ]
     },
     {
-      logo: '/modern-portfolio/images/LogoSPIT.png',
+      logo: '/Website/images/LogoSPIT.png',
       school: 'Sardar Patel Institute of Technology',
       degree: 'Bachelor of Technology in Electronics and Telecommunication (2020 - 2024)',
       details: [

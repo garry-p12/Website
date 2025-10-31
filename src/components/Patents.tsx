@@ -4,19 +4,19 @@ import '../styles/Publications.css';
 const Patents = () => {
   const patents = [
     {
-      image: '/modern-portfolio/images/driving.jpeg',
+      image: '/Website/images/driving.jpeg',
       title: 'Real-time Obstacle Detection and Response System for Safer Driving',
       publisher: 'Published in: Indian Patent Office',
       link: 'https://drive.google.com/file/d/122ylixphXiJLTEYJUCanwdIzojDNvwu_/view'
     },
     {
-      image: '/modern-portfolio/images/women.jpeg',
+      image: '/Website/images/women.jpeg',
       title: 'Lakshman Rekha - An AI and IoT powered Women Safety System',
       publisher: 'Published in: Indian Patent Office',
       link: 'https://drive.google.com/file/d/1hQGSMiPD1n7VqwPBfwkktKtKCdBF4tz-/view'
     },
     {
-      image: '/modern-portfolio/images/cctv.jpg',
+      image: '/Website/images/cctv.jpg',
       title: 'EyeSpy Analytics - A CCTV Analytics Solution',
       publisher: 'Published in: Indian Patent Office',
       link: 'https://drive.google.com/file/d/1hpNVu-Ppw-AD0L_6LNNnnKUR_gfI1QCG/view?usp=sharing'
