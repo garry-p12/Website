@@ -24,7 +24,7 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="publications-section">
+    <section id="projects" className="projects-section">
       <div className="section-container">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}

@@ -121,3 +121,31 @@
   }
 }
 
+@media (max-width: 640px) {
+  .education-section {
+    min-height: auto;
+    padding: 4rem 0;
+  }
+
+  .timeline-item {
+    gap: 1.25rem;
+  }
+
+  .timeline-content {
+    padding: 1.25rem;
+  }
+
+  .timeline-content h3 {
+    font-size: 1.35rem;
+  }
+
+  .timeline-content span {
+    font-size: 0.9rem;
+  }
+
+  .timeline-content ul {
+    padding-left: 1.2rem;
+    font-size: 0.95rem;
+  }
+}
+

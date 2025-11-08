@@ -8,7 +8,8 @@ const Education = () => {
       school: 'University of California San Diego',
       degree: 'Master of Science in Data Science (2024 - Present)',
       details: [
-        'Upcoming DS grad student from Fall 2024'
+        'GPA: 3.8/4',
+        'Courses: Probability and Statistics, Machine Learning, Advanced Text Mining, Scalable Data Systems, Statistical Models'
       ]
     },
     {

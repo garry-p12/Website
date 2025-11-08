@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   padding: 5rem 0;
-  background: linear-gradient(to bottom right, #1e293b, #0f172a);
+  background: linear-gradient(135deg, #f9fafb, #e2e8f0);
 }
 
 .about-container {
@@ -38,12 +38,6 @@
   border-radius: 2px;
 }
 
-.section-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
 .about-content {
   display: flex;
   flex-direction: column;
@@ -62,7 +56,7 @@
 .about-text {
   flex: 1;
   font-size: 1.125rem;
-  color: #cbd5e1;
+  color: #1f2937;
   line-height: 1.75;
 }
 
@@ -73,63 +67,29 @@
   }
 }
 
-.skills-section {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 5rem 0;
-  background: linear-gradient(to bottom right, #dbeafe, #cffafe);
+@media (max-width: 640px) {
+  .about-section {
+    min-height: auto;
+    padding: 4rem 0;
+  }
+
+  .about-image {
+    width: 200px;
+    height: 200px;
+  }
+
+  .section-header {
+    font-size: 2.25rem;
+  }
+
+  .about-text {
+    font-size: 1.05rem;
+  }
 }
 
-.skills-container {
+.section-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
-}
-
-.skills-header {
-  font-size: 3rem;
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 3rem;
-  background: linear-gradient(to right, #9333ea, #2563eb, #06b6d4);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
-}
-
-.skill-card {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 20px;
-  padding: 1.5rem;
-  text-align: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.skill-card:hover {
-  transform: scale(1.1) rotate(5deg);
-  background: rgba(255, 255, 255, 0.2);
-}
-
-.skill-icon {
-  font-size: 2.5rem;
-  margin-bottom: 0.75rem;
-}
-
-.skill-name {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: #333;
 }
 

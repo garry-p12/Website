@@ -7,6 +7,17 @@ const Experience = () => {
 
   const experiences = [
     {
+      logo: '/Website/images/Amazon-Prime-Video-Icon.png',
+      company: 'Amazon Prime Video',
+      role: 'Software Development Engineer Intern (June 2025 – Sept 2025)',
+      details: [
+        "Built a production-grade Artwork Analysis API and its AI agent for Prime Video's agentic platform Reacher, automating moderation of metadata and images to ensure safe content delivery for kids",
+        'Developed scalable backend services using Java Spring Boot, adhering to SDLC best practices, modular code design, Git-based workflows, and CI/CD pipelines for automated testing and deployment',
+        'Integrated Claude 4 Sonnet via Amazon Bedrock with advanced prompting, cutting manual QA effort by 60%',
+        'Provisioned scalable, fault-tolerant infrastructure on AWS ECS Fargate using TypeScript CDK, incorporating Smithy-defined APIs, load-balanced service definitions, and full unit and integration test coverage'
+      ]
+    },
+    {
       logo: '/Website/images/sdsc_logo.webp',
       company: 'San Diego Supercomputer Center (SDSC)',
       role: 'Data Science Intern (Apr 2025 – Jun 2025)',
@@ -15,17 +26,6 @@ const Experience = () => {
         'Optimized end-to-end training and inference pipeline by streamlining data integration, preprocessing, and feature alignment across FIA and TLS sources; research accepted at the 54th ICPP 2025',
         'Optimized ensemble methods (RF, ET, XGBoost) with class-aware loss to improve rare-class performance',
         'Curated a benchmark dataset in collaboration with Los Alamos National Laboratory for large-scale forest biodiversity and fire resilience research'
-      ]
-    },
-    {
-      logo: '/Website/images/Amazon-Prime-Video-Icon.png',
-      company: 'Amazon Prime Video',
-      role: 'Software Development Engineer Intern (June 2025 – Sept 2025)',
-      details: [
-        'Built a production-grade Artwork Analysis API and its AI agent for Prime Video\'s agentic platform Reacher, automating moderation of metadata and images to ensure safe content delivery for kids',
-        'Developed scalable backend services using Java Spring Boot, adhering to SDLC best practices, modular code design, Git-based workflows, and CI/CD pipelines for automated testing and deployment',
-        'Integrated Claude 4 Sonnet via Amazon Bedrock with advanced prompting, cutting manual QA effort by 60%',
-        'Provisioned scalable, fault-tolerant infrastructure on AWS ECS Fargate using TypeScript CDK, incorporating Smithy-defined APIs, load-balanced service definitions, and full unit and integration test coverage'
       ]
     },
     {

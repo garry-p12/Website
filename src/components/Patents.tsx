@@ -24,7 +24,7 @@ const Patents = () => {
   ];
 
   return (
-    <section id="patents" className="publications-section">
+    <section id="patents" className="patents-section">
       <div className="section-container">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
