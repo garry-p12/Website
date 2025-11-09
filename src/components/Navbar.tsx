@@ -10,9 +10,30 @@ const Navbar = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      if (isMobileMenuOpen && !target.closest('.navbar')) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    if (isMobileMenuOpen) {
+      document.addEventListener('click', handleClickOutside);
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+      document.body.style.overflow = '';
+    };
+  }, [isMobileMenuOpen]);
 
   const navItems = [
     { href: '#about', label: 'About' },
@@ -81,11 +102,17 @@ const Navbar = () => {
         </button>
       </div>
 
-      <motion.div
-        initial={false}
-        animate={{ height: isMobileMenuOpen ? 'auto' : 0 }}
-        className="nav-mobile"
-      >
+      {isMobileMenuOpen && (
+        <motion.div
+          initial={{ height: 0, opacity: 0 }}
+          animate={{ 
+            height: 'auto',
+            opacity: 1
+          }}
+          exit={{ height: 0, opacity: 0 }}
+          transition={{ duration: 0.25, ease: 'easeInOut' }}
+          className="nav-mobile"
+        >
         <div className="nav-mobile-content">
           {navItems.map((item) => (
             <a
@@ -99,6 +126,7 @@ const Navbar = () => {
           ))}
         </div>
       </motion.div>
+      )}
     </motion.nav>
   );
 };

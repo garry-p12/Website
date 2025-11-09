@@ -9,6 +9,8 @@
     radial-gradient(circle at 18% 22%, rgba(59, 130, 246, 0.1), transparent 58%),
     radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.12), transparent 60%),
     linear-gradient(175deg, #05070f 0%, #020308 45%, #050910 100%);
+  will-change: auto;
+  transform: translateZ(0);
 }
 
 .skills-section::before,
@@ -271,18 +273,108 @@
 }
 
 @media (max-width: 768px) {
+  .skills-section {
+    min-height: auto;
+    padding: 4rem 0;
+  }
+
   .skills-shell {
-    padding: 3.5rem 1.25rem 3rem;
+    padding: 3rem 1rem 2.5rem;
+    gap: 2rem;
+  }
+
+  .section-header {
+    font-size: 2.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .skills-subtitle {
+    font-size: 0.95rem;
+    padding: 0 0.5rem;
+  }
+
+  .skills-console-row {
+    gap: 1.25rem;
+    padding-bottom: 0.75rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .skills-terminal {
+    flex: 0 0 240px;
+    height: 260px;
+    transform: none;
+    scroll-snap-align: center;
+  }
+
+  .skills-terminal:hover {
+    transform: translateY(-4px);
+  }
+}
+
+@media (max-width: 640px) {
+  .skills-section {
+    padding: 3.5rem 0;
+  }
+
+  .skills-shell {
+    padding: 2.5rem 0.875rem 2rem;
+    gap: 1.75rem;
+  }
+
+  .section-header {
+    font-size: 2rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .skills-subtitle {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .skills-console-row {
+    gap: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
 
   .skills-terminal {
     flex: 0 0 220px;
     height: 240px;
-    transform: none;
+    padding: 1.1rem 0.9rem 1.2rem;
   }
 
-  .skills-terminal:hover {
-    transform: translateY(-6px);
+  .skills-terminal__body {
+    height: calc(100% - 1.7rem);
+  }
+
+  .skills-terminal__line {
+    font-size: 0.75rem;
+    min-height: 1.1rem;
+  }
+
+  .skills-terminal__subtitle {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-shell {
+    padding: 2rem 0.75rem 1.75rem;
+  }
+
+  .section-header {
+    font-size: 1.75rem;
+  }
+
+  .skills-terminal {
+    flex: 0 0 200px;
+    height: 220px;
+    padding: 1rem 0.75rem 1.1rem;
+  }
+
+  .skills-terminal__line {
+    font-size: 0.7rem;
   }
 }
 

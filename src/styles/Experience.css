@@ -5,6 +5,8 @@
   justify-content: center;
   padding: 5rem 0;
   background: linear-gradient(135deg, #f8fafc, #e8f4ff);
+  will-change: auto;
+  transform: translateZ(0);
 }
 
 .experience-carousel {
@@ -113,9 +115,28 @@
 }
 
 @media (max-width: 768px) {
+  .experience-section {
+    padding: 4rem 0;
+  }
+
+  .section-container {
+    padding: 0 1rem;
+  }
+
+  .experience-carousel {
+    padding: 1.5rem 0;
+  }
+
   .experience-card {
     flex-direction: column;
     text-align: center;
+    gap: 1.5rem;
+    padding: 1.75rem;
+  }
+
+  .experience-logo {
+    width: 70px;
+    height: 70px;
   }
   
   .carousel-btn {
@@ -125,36 +146,92 @@
   }
   
   .carousel-btn.prev {
-    left: -20px;
+    left: -15px;
   }
   
   .carousel-btn.next {
-    right: -20px;
+    right: -15px;
   }
 }
 
 @media (max-width: 640px) {
   .experience-section {
     min-height: auto;
-    padding: 4rem 0 3rem;
+    padding: 3.5rem 0 2.5rem;
+  }
+
+  .section-container {
+    padding: 0 1rem;
+  }
+
+  .section-header {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .experience-carousel {
+    padding: 1rem 0;
+  }
+
+  .carousel-content {
+    min-height: 350px;
   }
 
   .experience-card {
     gap: 1.25rem;
-    padding: 1.6rem;
+    padding: 1.5rem;
+  }
+
+  .experience-logo {
+    width: 60px;
+    height: 60px;
   }
 
   .experience-details h3 {
-    font-size: 1.45rem;
+    font-size: 1.35rem;
+    line-height: 1.3;
+  }
+
+  .experience-details span {
+    font-size: 0.9rem;
+    margin: 0.4rem 0 0.875rem;
   }
 
   .experience-details ul {
     padding-left: 1.25rem;
     font-size: 0.95rem;
+    text-align: left;
+    line-height: 1.6;
+  }
+
+  .experience-details li {
+    margin-bottom: 0.5rem;
   }
 
   .carousel-btn {
     display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience-section {
+    padding: 3rem 0 2rem;
+  }
+
+  .section-header {
+    font-size: 1.75rem;
+  }
+
+  .experience-card {
+    padding: 1.25rem;
+  }
+
+  .experience-details h3 {
+    font-size: 1.2rem;
+  }
+
+  .experience-details ul {
+    font-size: 0.9rem;
   }
 }
 
