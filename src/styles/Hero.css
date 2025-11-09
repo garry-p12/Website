@@ -12,6 +12,7 @@
   will-change: auto;
   transform: translateZ(0);
   backface-visibility: hidden;
+  contain: layout style;
 }
 
 .hero-section::after {
@@ -142,6 +143,7 @@
   align-items: center;
   min-height: 520px;
   padding: 3rem 1.5rem;
+  contain: layout;
 }
 
 .laptop {
@@ -150,6 +152,7 @@
   align-items: center;
   justify-content: center;
   z-index: 4;
+  contain: layout size;
 }
 
 .laptop-screen {
@@ -355,11 +358,16 @@
   .hero-section {
     padding: calc(5.5rem + env(safe-area-inset-top)) 0 4rem;
     min-height: auto;
+    height: auto;
+    max-height: none;
+    overflow: visible;
+    isolation: isolate;
   }
 
   .hero-container {
     width: 100%;
     padding: 0 1rem;
+    contain: layout;
   }
 
   .hero-title {
@@ -386,19 +394,27 @@
 
   .hero-showcase {
     padding: 1.5rem 0.75rem;
-    min-height: 400px;
+    min-height: 450px;
+    max-height: 500px;
+    height: 500px;
+    overflow: hidden;
+    contain: strict;
   }
 
   .laptop-screen {
     max-width: 100%;
-    max-height: 500px;
+    max-height: 450px;
     min-width: 0;
+    height: 100%;
   }
 
   .laptop {
     width: 100%;
     max-width: 100%;
+    max-height: 450px;
+    height: 450px;
     padding: 0 0.5rem;
+    contain: strict;
   }
 
   .screen-body {
@@ -450,18 +466,26 @@
   }
 
   .hero-showcase {
-    min-height: 350px;
+    min-height: 400px;
+    max-height: 450px;
+    height: 450px;
     padding: 1.25rem 0.5rem;
+    overflow: hidden;
+    contain: strict;
   }
 
   .laptop-screen {
-    max-height: 450px;
+    max-height: 400px;
+    height: 100%;
     width: 100%;
   }
 
   .laptop {
     width: 100%;
+    max-height: 400px;
+    height: 400px;
     padding: 0 0.25rem;
+    contain: strict;
   }
 
   .screen-body {

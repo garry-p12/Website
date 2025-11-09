@@ -107,6 +107,9 @@ const Hero = () => {
   useEffect(() => {
     const measure = () => {
       if (!screenRef.current) return;
+      
+      // Skip dynamic resizing on mobile to prevent layout shifts
+      if (viewportWidth <= 640) return;
 
       const content = screenRef.current;
       const widthPadding = 210;
@@ -134,8 +137,11 @@ const Hero = () => {
     { icon: 'fa fa-envelope', href: 'mailto:gparasnis@ucsd.edu' },
   ];
 
-  const computedWidth = Math.min(screenSize.width, Math.max(320, viewportWidth * 0.92));
-  const computedHeight = screenSize.height;
+  const isMobile = viewportWidth <= 640;
+  const computedWidth = isMobile 
+    ? Math.min(viewportWidth * 0.92, 400) 
+    : Math.min(screenSize.width, Math.max(320, viewportWidth * 0.92));
+  const computedHeight = isMobile ? 450 : screenSize.height;
 
   return (
     <section className="hero-section">
@@ -223,7 +229,7 @@ const Hero = () => {
             <motion.div
               className="laptop"
               animate={{ width: computedWidth, height: computedHeight }}
-              transition={{ type: 'spring', stiffness: 220, damping: 28 }}
+              transition={isMobile ? { duration: 0 } : { type: 'spring', stiffness: 220, damping: 28 }}
               style={{ maxWidth: '96vw' }}
             >
               <div className="laptop-screen">
