@@ -211,6 +211,41 @@
   .carousel-btn {
     display: none;
   }
+
+  .carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 2rem;
+    padding: 0 1rem;
+  }
+
+  .carousel-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(14, 165, 233, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+  }
+
+  .carousel-dot.active {
+    background: #0ea5e9;
+    width: 24px;
+    border-radius: 5px;
+  }
+
+  .carousel-dot:hover {
+    background: rgba(14, 165, 233, 0.6);
+  }
+}
+
+@media (min-width: 641px) {
+  .carousel-dots {
+    display: none;
+  }
 }
 
 @media (max-width: 480px) {

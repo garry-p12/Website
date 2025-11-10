@@ -1,9 +1,11 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import '../styles/Experience.css';
 
 const Experience = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const touchStartX = useRef<number | null>(null);
+  const touchEndX = useRef<number | null>(null);
 
   const experiences = [
     {
@@ -78,6 +80,31 @@ const Experience = () => {
     setCurrentIndex((prev) => (prev - 1 + experiences.length) % experiences.length);
   };
 
+  const minSwipeDistance = 50;
+
+  const onTouchStart = (e: React.TouchEvent) => {
+    touchEndX.current = null;
+    touchStartX.current = e.targetTouches[0].clientX;
+  };
+
+  const onTouchMove = (e: React.TouchEvent) => {
+    touchEndX.current = e.targetTouches[0].clientX;
+  };
+
+  const onTouchEnd = () => {
+    if (!touchStartX.current || !touchEndX.current) return;
+    
+    const distance = touchStartX.current - touchEndX.current;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+
+    if (isLeftSwipe) {
+      nextExperience();
+    } else if (isRightSwipe) {
+      prevExperience();
+    }
+  };
+
   return (
     <section id="experience" className="experience-section">
       <div className="section-container">
@@ -95,7 +122,12 @@ const Experience = () => {
             <i className="fas fa-chevron-left" />
           </button>
           
-          <div className="carousel-content">
+          <div 
+            className="carousel-content"
+            onTouchStart={onTouchStart}
+            onTouchMove={onTouchMove}
+            onTouchEnd={onTouchEnd}
+          >
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentIndex}
@@ -124,6 +156,18 @@ const Experience = () => {
           <button className="carousel-btn next" onClick={nextExperience}>
             <i className="fas fa-chevron-right" />
           </button>
+        </div>
+
+        {/* Mobile navigation dots */}
+        <div className="carousel-dots">
+          {experiences.map((_, index) => (
+            <button
+              key={index}
+              className={`carousel-dot ${index === currentIndex ? 'active' : ''}`}
+              onClick={() => setCurrentIndex(index)}
+              aria-label={`Go to experience ${index + 1}`}
+            />
+          ))}
         </div>
       </div>
     </section>
